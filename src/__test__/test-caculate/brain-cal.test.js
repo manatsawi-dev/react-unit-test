@@ -19,6 +19,10 @@ test("addBrain 10 + 2 to equal 3", () => {
   expect(addBrain(10, 2)).toBe(12);
 });
 
+test("addBrain 0.1 + 0.2 to equal .33", () => {
+  expect(addBrain(0.1, 0.2)).toBeCloseTo(0.3);
+});
+
 /**
  * Test case for minusBrain func
  */
