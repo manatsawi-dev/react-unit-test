@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<View/> renders View append child correctly 1`] = `
+<div
+  className="normal"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p>
+    Child
+  </p>
+</div>
+`;
+
+exports[`<View/> renders View correctly 1`] = `
+<div
+  className="normal"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
