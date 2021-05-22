@@ -4,6 +4,13 @@ import Sinon from "sinon";
 import { mount } from "enzyme";
 
 describe("<Foo/>", () => {
+  const origConsole = console.error;
+  beforeEach(() => {
+    console.error = () => {};
+  });
+  afterEach(() => {
+    console.error = origConsole;
+  });
   it("allows us to set props", () => {
     const wrapper = mount(<Foo bar="baz" />);
     expect(wrapper.props().bar).toEqual("baz");
