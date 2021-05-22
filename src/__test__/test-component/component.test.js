@@ -5,6 +5,14 @@ import Sinon from "sinon";
 import View from "./component";
 
 describe("<View/>", () => {
+  const origConsole = console.error;
+  beforeEach(() => {
+    console.error = () => {};
+  });
+  afterEach(() => {
+    console.error = origConsole;
+  });
+  
   it("renders View correctly", () => {
     const tree = renderer.create(<View />).toJSON();
     expect(tree).toMatchSnapshot();
